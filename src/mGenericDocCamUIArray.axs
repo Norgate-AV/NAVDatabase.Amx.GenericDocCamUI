@@ -90,30 +90,6 @@ DEFINE_EVENT
 button_event[dvTP, 0] {
     push: {
         to[vdvObject, button.input.channel]
-        NAVLog("'Channel ', itoa(button.input.channel), ' ', NAVStringSurroundWith(NAVDeviceToString(vdvObject), '[', ']'), ': [ON]'")
-    }
-    release: {
-        NAVLog("'Channel ', itoa(button.input.channel), ' ', NAVStringSurroundWith(NAVDeviceToString(vdvObject), '[', ']'), ': [OFF]'")
-    }
-}
-
-
-data_event[vdvObject] {
-    command: {
-        stack_var char cCmdHeader[NAV_MAX_CHARS]
-        stack_var char cCmdParam[2][NAV_MAX_CHARS]
-
-        NAVLog("'Command from ', NAVStringSurroundWith(NAVDeviceToString(data.device), '[', ']'), ': [', data.text, ']'")
-
-        cCmdHeader = DuetParseCmdHeader(data.text)
-        cCmdParam[1] = DuetParseCmdParam(data.text)
-        cCmdParam[2] = DuetParseCmdParam(data.text)
-
-        switch (cCmdHeader) {
-            default: {
-
-            }
-        }
     }
 }
 
