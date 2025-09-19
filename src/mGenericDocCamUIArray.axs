@@ -4,8 +4,6 @@ MODULE_NAME='mGenericDocCamUIArray'     (
                                         )
 
 (***********************************************************)
-#include 'NAVFoundation.ModuleBase.axi'
-#include 'NAVFoundation.UIUtils.axi'
 
 /*
  _   _                       _          ___     __
